@@ -1,0 +1,118 @@
+
+.skills {
+    background-color: #1a1a1a; 
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); 
+    margin: 40px auto;
+    max-width: 900px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.skills:hover {
+    transform: scale(1.03); 
+}
+
+.skills h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 2rem;
+    font-family: 'Poppins', sans-serif; 
+    letter-spacing: 1px;
+}
+
+.skills-list {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.skill {
+    background: linear-gradient(45deg, #3498db, #8e44ad); 
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s, background 0.4s;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill {
+    animation: float 4s ease-in-out infinite; 
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); 
+    }
+}
+
+.skill:hover {
+    transform: scale(1.15); 
+    background: linear-gradient(45deg, #ff6347, #ffdb58);
+    box-shadow: 0 6px 20px rgba(255, 99, 71, 0.6); 
+}
+
+.skill::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.2), transparent);
+    transform: rotate(45deg);
+    transition: transform 0.5s ease-in-out;
+    pointer-events: none;
+}
+
+.skill:hover::before {
+    transform: rotate(0deg); 
+}
+
+@media (max-width: 768px) {
+    .skills {
+        padding: 2rem; 
+    }
+
+    .skills h2 {
+        font-size: 2rem; 
+    }
+
+    .skills-list {
+        gap: 1rem;
+    }
+
+    .skill {
+        font-size: 1rem; 
+        padding: 0.8rem 1.5rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    .skills {
+        padding: 1.5rem;
+    }
+
+    .skills h2 {
+        font-size: 1.5rem; 
+    }
+
+    .skills-list {
+        flex-direction: column; 
+    }
+
+    .skill {
+        width: 100%; 
+        margin-bottom: 1rem; 
+    }
+}

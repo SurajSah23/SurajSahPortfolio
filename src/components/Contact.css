@@ -1,0 +1,140 @@
+.contact {
+    background-color: #f4f4f4;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact h2 {
+    color: #007bff;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+    flex: 1 1 100%;
+}
+
+.contact-item img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: scale(1.1);
+}
+
+.github:hover {
+    color: #333;
+    animation: glow 1s infinite alternate;
+}
+
+.email:hover {
+    color: #d93025;
+    animation: shake 0.5s;
+}
+
+.linkedin:hover {
+    color: #0077b5;
+    animation: pulse 1s infinite;
+}
+
+.phone:hover {
+    color: #007bff;
+    animation: bounce 0.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(0, 123, 255, 0.7);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .contact {
+        padding: 1.5rem; 
+    }
+
+    .contact h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-info {
+        justify-content: center;
+    }
+
+    .contact-item {
+        flex: 1 1 45%;
+        margin: 0.5rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact {
+        padding: 1rem;
+    }
+
+    .contact h2 {
+        font-size: 1.25rem; 
+    }
+
+    .contact-item {
+        flex: 1 1 100%;
+        font-size: 1rem;
+    }
+}
