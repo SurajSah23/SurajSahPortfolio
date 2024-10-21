@@ -2,7 +2,7 @@ import './Projects.css';
 
 const Projects = () => {
     const projects = [
-        { name: 'Random Image Explorer', link: 'https://random-image-explorer-in-react.vercel.app/' },
+        { name: 'Phot Management App', link: 'https://photo-managament-app.netlify.app/' },
         { name: 'Dharam Music', link: 'https://mydharammusic.me/' },
     ];
 
